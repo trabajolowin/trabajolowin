@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/imagen.png') no-repeat center center fixed; /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff; /* Texto blanco */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px); /* Efecto borroso */
+    -webkit-filter: blur(8px); /* Efecto borroso para navegadores webkit */
+    z-index: -1; /* Coloca el filtro detrás de todo */
+}
+
+.container, #login-register, #register, #game-container, #video-section {
+    position: relative;
+    z-index: 1; /* Asegura que estos contenedores estén por encima del efecto borroso */
+}
+
+.container {
+    width: 80%;
+    max-width: 400px; /* Ajustado para un diseño más compacto */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo del contenedor más oscuro */
+    padding: 20px 30px; /* Más relleno */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    text-align: center;
+    z-index: 1; /* Asegura que el contenedor esté por encima del efecto borroso */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.video-heading {
+    font-size: 1.8rem; /* Tamaño del encabezado del video */
+    margin-bottom: 10px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+input {
+    width: 100%; /* Ancho completo */
+    padding: 15px 15px 15px 40px; /* Espacio para el icono */
+    border-radius: 8px; /* Bordes más redondeados */
+    border: 1px solid #ccc;
+    background-color: #444; /* Fondo de los inputs oscuro */
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Tamaño de fuente más grande */
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px 30px; /* Más relleno */
+    background-color: #28a745; /* Nuevo color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones */
+    font-size: 1rem; /* Tamaño de fuente más grande */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+button:hover {
+    background-color: #218838; /* Nuevo color */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+.register-btn {
+    background-color: #007bff;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-btn {
+    background-color: #17a2b8;
+}
+
+.login-btn:hover {
+    background-color: #117a8b;
+}
+
+#game-container, #video-section {
+    width: 100%;
+    max-width: 600px; /* Ajuste para contenedor del video */
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Colocar elementos en columna */
+    border: none; /* Sin borde */
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo del contenedor de video oscuro con transparencia */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s ease-in-out; /* Transición de aparición y desaparición */
+    z-index: 1; /* Asegura que el contenedor esté por encima del efecto borroso */
+}
+
+.video-frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Ajusta la altura automáticamente */
+    border-radius: 8px; /* Bordes redondeados para el video */
+}
+
+.message {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilos para la animación de carga */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+

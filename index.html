@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himno de Fe y Alegria</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <script src="https://code.playcanvas.com/playcanvas-stable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-message" class="welcome">
+            <h2>Bienvenido</h2>
+        </div>
+        <div id="message-container" class="message" style="display: none;"></div> <!-- Contenedor de mensajes -->
+        <div id="login-register" style="display: none;">
+            <h2>Login</h2>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button onclick="login()">Login</button>
+            <button class="register-btn" onclick="showRegister()">Register</button>
+        </div>
+        <div id="register" style="display: none;">
+            <h2>Register</h2>
+            <div class="input-container">
+                <i class="fas fa-user"></i>
+                <input type="text" id="new-username" placeholder="Username">
+            </div>
+            <div class="input-container">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="new-password" placeholder="Password">
+            </div>
+            <button onclick="register()">Register</button>
+            <button class="login-btn" onclick="showLogin()">Back to Login</button>
+        </div>
+        <div id="game-container" style="display: none;"></div>
+        <div id="loader" class="loader" style="display: none;"></div> <!-- Contenedor de la animación de carga -->
+        <div id="video-section" style="display: none;">
+            <h2 class="video-heading">Te presentamos el himno del Fe y Alegría</h2>
+            <div id="video-container" class="video-frame">
+                <video width="560" height="315" controls autoplay>
+                    <source src="videos/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
